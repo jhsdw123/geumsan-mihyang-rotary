@@ -28,6 +28,8 @@
   body.js .hero-inner{animation:rise .9s cubic-bezier(.2,.7,.2,1) .15s forwards;}
   .hero-orn{display:flex;justify-content:center;margin-bottom:20px;}
   .hero-orn svg{width:52px;height:52px;}
+  .hero-orn img{width:66px;height:66px;object-fit:contain;display:block;filter:drop-shadow(0 4px 14px rgba(200,160,74,.4));}
+  @media(max-width:560px){.hero-orn img{width:58px;height:58px;}}
   .hero-eyebrow{font-size:.76rem;letter-spacing:.42em;color:var(--gold-bright);font-weight:500;margin-bottom:18px;padding-left:.42em;}
   .hero h1{font-family:var(--serif-ko);font-weight:700;font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.01em;line-height:1.08;color:#fbf6e9;}
   .hero-rule{width:60px;height:2px;background:var(--gold);margin:24px auto 22px;position:relative;}
@@ -319,12 +321,7 @@
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-orn">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="30" stroke="#C8A04A" stroke-width="1.4"/>
-          <circle cx="50" cy="50" r="22" stroke="#C8A04A" stroke-width="1" opacity=".7"/>
-          <g stroke="#E6C268" stroke-width="1.6"><line x1="50" y1="6" x2="50" y2="16"/><line x1="50" y1="84" x2="50" y2="94"/><line x1="6" y1="50" x2="16" y2="50"/><line x1="84" y1="50" x2="94" y2="50"/></g>
-          <path d="M50 38 L53 47 L62 47 L55 53 L57 62 L50 56 L43 62 L45 53 L38 47 L47 47 Z" fill="#C8A04A"/>
-        </svg>
+        <img src="rotary-logo.png" alt="Rotary International" />
       </div>
       <div class="hero-eyebrow">국제로타리 3680지구 11지역</div>
       <h1>금산미향로타리클럽</h1>
