@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연혁 · 금산미향로타리클럽</title>
+<meta name="description" content="금산미향로타리클럽 연혁 — 2008 창립부터 2026까지 회장별·날짜순 봉사의 기록">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --royal:#16448C;--royal-deep:#0D2348;--royal-mid:#13305f;
+ --gold:#C8A04A;--gold-dark:#a9842f;--gold-bright:#E6C268;--gold-soft:#efe3c4;
+ --paper:#F6F2E9;--paper-2:#FBF8F1;--card:#FFFFFF;
+ --ink:#2A303B;--ink-soft:#5d6573;--line:#e7ded0;--hair:#f0e9da;
+ --serif-ko:"Gowun Batang",serif;--serif-la:"Cormorant Garamond",serif;--sans:"Noto Sans KR",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--ink);line-height:1.6;min-height:100vh;}
+/* dark navy aurora background (matches main site) */
+.aurora{position:fixed;inset:0;z-index:-1;
+ background:
+  radial-gradient(120% 80% at 50% -10%,rgba(200,160,74,.16),transparent 55%),
+  linear-gradient(160deg,#0a1c3d,#0d2348 40%,#0f2851 72%,#0a1d3e);}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+ padding:13px 20px;background:rgba(10,24,55,.72);backdrop-filter:blur(12px);
+ border-bottom:1px solid rgba(200,160,74,.35);}
+.topbar a.back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#EAE2D2;
+ font-weight:700;font-size:15px;transition:.2s;}
+.topbar a.back:hover{color:var(--gold-bright);transform:translateX(-2px);}
+.topbar .tb-r{font-family:var(--serif-la);font-style:italic;color:var(--gold-bright);font-size:15px;}
+
+/* hero */
+.hero{text-align:center;padding:54px 20px 28px;}
+.hero .orn{width:46px;height:46px;margin:0 auto 12px;}
+.hero .eyebrow{font-family:var(--serif-la);font-style:italic;font-size:18px;color:var(--gold-bright);letter-spacing:.04em;}
+.hero h1{font-family:var(--serif-ko);font-weight:700;font-size:clamp(30px,7vw,46px);color:#F4ECDC;
+ letter-spacing:.04em;margin:2px 0 4px;}
+.hero .sub{color:#aeb9cd;font-size:clamp(13px,3.4vw,15px);font-weight:300;}
+.hero .rule{width:64px;height:2px;margin:16px auto 0;
+ background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+
+/* timeline */
+.wrap{max-width:860px;margin:0 auto;padding:14px 18px 70px;}
+.yblock{position:relative;padding-left:118px;margin-bottom:8px;}
+.yblock::before{content:"";position:absolute;left:96px;top:8px;bottom:-8px;width:2px;
+ background:linear-gradient(180deg,var(--gold-soft),var(--gold) 40%,var(--gold-soft));}
+.yblock:last-child::before{bottom:auto;height:46px;}
+.ymark{position:absolute;left:0;top:0;width:96px;text-align:right;padding-right:26px;}
+.ymark::after{content:"";position:absolute;right:-7px;top:7px;width:14px;height:14px;border-radius:50%;
+ background:radial-gradient(circle at 35% 30%,#fff6df,var(--gold) 60%,var(--gold-dark));
+ border:2.5px solid var(--paper-2);box-shadow:0 0 0 1px var(--gold-soft);}
+.ynum{display:block;font-family:var(--serif-la);font-weight:700;font-size:31px;color:#F2E6C9;line-height:1;
+ text-shadow:0 1px 8px rgba(0,0,0,.3);}
+.ycnt{display:block;font-size:10.5px;color:var(--gold-bright);font-weight:600;letter-spacing:.05em;margin-top:3px;}
+.entries{display:flex;flex-direction:column;gap:10px;padding-top:2px;}
+
+.entry{position:relative;display:grid;grid-template-columns:48px 1fr;gap:14px;
+ background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold-soft);
+ border-radius:13px;padding:13px 16px;
+ box-shadow:0 2px 8px -4px rgba(13,35,72,.10);
+ transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
+.entry:hover{transform:translateY(-3px);border-left-color:var(--gold);
+ box-shadow:0 12px 26px -12px rgba(13,35,72,.28),0 2px 6px -3px rgba(200,160,74,.30);}
+.entry .mo{font-family:var(--serif-la);font-weight:700;font-size:19px;color:var(--gold-dark);
+ text-align:center;padding-top:1px;}
+.entry .mo::before{content:"·";display:block;font-size:11px;color:var(--gold);line-height:.5;}
+.etext{font-size:14px;color:var(--ink);word-break:keep-all;}
+.etext b{font-weight:700;color:var(--royal);}
+.ptag{margin-top:7px;font-size:11px;color:var(--ink-soft);}
+.ptag .pe{display:inline-block;background:#eef2f8;color:var(--royal);font-weight:700;
+ padding:1px 8px;border-radius:999px;border:1px solid #dbe3ef;margin-right:5px;font-size:10.5px;}
+.atag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:#4a350c;
+ background:linear-gradient(160deg,var(--gold-bright),var(--gold));padding:1px 8px;border-radius:5px;
+ margin-right:7px;vertical-align:1.5px;}
+.entry.award{border-left-color:var(--gold);background:linear-gradient(120deg,#fffdf7, #fdf7e8);}
+.entry.award:hover{box-shadow:0 12px 28px -12px rgba(200,160,74,.5);}
+
+/* footer */
+.foot{text-align:center;padding:36px 20px 54px;color:#9aa6bc;font-size:13px;
+ border-top:1px solid rgba(200,160,74,.28);background:rgba(8,18,42,.5);}
+.foot .motto{font-family:var(--serif-la);font-style:italic;color:var(--gold-bright);font-size:16px;margin-top:8px;}
+.foot a{color:#d8c596;font-weight:700;text-decoration:none;}
+.foot a:hover{color:var(--gold-bright);}
+
+@media (max-width:640px){
+ .wrap{padding:10px 14px 56px;}
+ .yblock{padding-left:62px;}
+ .yblock::before{left:46px;}
+ .ymark{width:46px;padding-right:14px;}
+ .ynum{font-size:21px;}
+ .ycnt{font-size:9px;}
+ .ymark::after{right:-7px;width:12px;height:12px;}
+ .entry{grid-template-columns:38px 1fr;gap:10px;padding:12px 13px;}
+ .entry .mo{font-size:16px;}
+ .etext{font-size:13.5px;}
+}
+</style>
+</head>
+<body>
+<div class="aurora"></div>
+<div class="topbar">
+ <a class="back" href="index.html">&larr; 금산미향로타리클럽</a>
+ <span class="tb-r">History</span>
+</div>
+<div class="hero">
+ <div class="orn"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="26" stroke="#C8A04A" stroke-width="1.3"/><path d="M50 40 L52.5 48 L61 48 L54 53 L56 61 L50 56 L44 61 L46 53 L39 48 L47.5 48 Z" fill="#C8A04A"/></svg></div>
+ <div class="eyebrow">History of the Club</div>
+ <h1>연혁</h1>
+ <div class="sub">2008년 창립부터 2026년까지 · 회장별·날짜 순으로 담은 봉사의 기록</div>
+ <div class="rule"></div>
+</div>
+<div class="wrap">
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2007</span><span class="ycnt">2건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">금산로타리클럽 이사회 승인으로 여성로타리클럽 <b>창립 결의</b></div>
+        <div class="ptag"><span class="pe">1대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">(가칭)삼꽃 여성로타리클럽 회원 첫 모임</div>
+        <div class="ptag"><span class="pe">1대</span> 유평 윤현희</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2008</span><span class="ycnt">7건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">01</div>
+        <div class="ebody"><div class="etext"><b>금산미향로타리클럽</b>으로 명칭 확정, 창립발기인대회 개최 (회원 20명)</div>
+        <div class="ptag"><span class="pe">1대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext"><b>창립총회</b> 개최 — 금산로타리클럽 스폰으로 정식 탄생 (회원 26명)</div>
+        <div class="ptag"><span class="pe">1대</span> 유평 윤현희</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제30년차 지구대회 — <b>창립회장상</b>·초대 총무상 수상</div>
+        <div class="ptag"><span class="pe">1대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext">어린이날 금산 군민 자전거타기 행사 참가</div>
+        <div class="ptag"><span class="pe">1대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">금산RC·라이온스·새금산라이온스·JC 등 5개 단체 합동 봉황천 봉사</div>
+        <div class="ptag"><span class="pe">1대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">금산RC와 사랑의 연탄 전달 / 충남사회복지 공동모금회 성금 전달</div>
+        <div class="ptag"><span class="pe">2대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext"><b>국제로타리(RI) 정식 가입 승인</b> 획득</div>
+        <div class="ptag"><span class="pe">2대</span> 유평 윤현희</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2009</span><span class="ycnt">7건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">RI창립 104주년 합동기념 — <b>RI 가입증서 수령</b></div>
+        <div class="ptag"><span class="pe">2대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 1주년 기념주회 개최</div>
+        <div class="ptag"><span class="pe">2대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext">제31년차 지구대회 참가</div>
+        <div class="ptag"><span class="pe">2대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext">인삼·약초 씨앗뿌리기 5개 단체 합동 봉사</div>
+        <div class="ptag"><span class="pe">2대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext">집중호우 <b>수해복구 봉사</b> (군북·복수면 일원)</div>
+        <div class="ptag"><span class="pe">3대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">제29회 금산인삼축제 자원봉사 — 인삼병 만들기 체험장 운영</div>
+        <div class="ptag"><span class="pe">3대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">다문화가족 <b>한글교육비</b> 전달 (지구보조금 100만원) / 공동모금회 성금 전달</div>
+        <div class="ptag"><span class="pe">3대</span> 유평 윤현희</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2010</span><span class="ycnt">5건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">RI창립 105주년 기념 합동주회</div>
+        <div class="ptag"><span class="pe">3대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">금산여고 입학식 장학금 전달 (클럽 장학생 3명 + 회장 개인 50만원) / 창립 2주년 기념주회</div>
+        <div class="ptag"><span class="pe">3대</span> 유평 윤현희</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">제30회 금산인삼축제 자원봉사</div>
+        <div class="ptag"><span class="pe">4대</span> 원당 전순주</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">금산읍 아인리 <b>사랑의집 고쳐주기</b> — 주거환경 개선·이불 전달</div>
+        <div class="ptag"><span class="pe">4대</span> 원당 전순주</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">불우이웃돕기 성금 전달 (클럽 20만원 + 회장 30만원)</div>
+        <div class="ptag"><span class="pe">4대</span> 원당 전순주</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2011</span><span class="ycnt">7건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">원당 장학금 3명 전달 / 사랑의 연탄 <b>10가구 2,000장</b> 전달</div>
+        <div class="ptag"><span class="pe">4대</span> 원당 전순주</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">클럽·원당·유평 장학금 다수 + <b>금산여고 입학장학금 200만원</b> 전달 / 창립 3주년 기념주회</div>
+        <div class="ptag"><span class="pe">4대</span> 원당 전순주</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제33년차 지구대회 — <b>RI재단기여상</b>·회원증강상 수상</div>
+        <div class="ptag"><span class="pe">4대</span> 원당 전순주</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext"><b>클럽 사무실 사용승인·현판식</b> (금산신협 별관 2층) — 독자 공간 확보</div>
+        <div class="ptag"><span class="pe">5대</span> 청아당 양향국</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">인삼엑스포 자원봉사</div>
+        <div class="ptag"><span class="pe">5대</span> 청아당 양향국</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">제31회 인삼축제 자원봉사</div>
+        <div class="ptag"><span class="pe">5대</span> 청아당 양향국</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">사랑의 연탄봉사</div>
+        <div class="ptag"><span class="pe">5대</span> 청아당 양향국</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2012</span><span class="ycnt">6건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 4주년 기념주회</div>
+        <div class="ptag"><span class="pe">5대</span> 청아당 양향국</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제34년차 지구대회 — 우수클럽상·클럽발전공로상·10·10·10 중규모클럽상·여성회원 증강상·우수회장상·우수총무상 등 다관왕</div>
+        <div class="ptag"><span class="pe">5대</span> 청아당 양향국</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">3680지구 <b>회관건립 기부금 1,000만원</b> 출연</div>
+        <div class="ptag"><span class="pe">5대</span> 청아당 양향국</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext">3680지구 다문화가정 고향보내주기 사업 — 회장 개인 120만원 전달</div>
+        <div class="ptag"><span class="pe">6대</span> 심향 곽영애</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext"><b>첫 국제봉사</b> — 캄보디아 헌옷 수집·전달 프로젝트 참여</div>
+        <div class="ptag"><span class="pe">6대</span> 심향 곽영애</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">희망의언덕(장애우) 김장 / 저소득층 연탄봉사 (금산RC 합동) / 사랑의 집짓기 사업 참여</div>
+        <div class="ptag"><span class="pe">6대</span> 심향 곽영애</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2013</span><span class="ycnt">7건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">금산여고·금산산업고 장학금 다수 전달 (회장 외 회원 개인 출연)</div>
+        <div class="ptag"><span class="pe">6대</span> 심향 곽영애</div></div>
+      </div><div class="entry">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext">금산군 7개 봉사단체 합동 황풍리 천변 청소</div>
+        <div class="ptag"><span class="pe">6대</span> 심향 곽영애</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제35년차 지구대회 — 회원증강 우수클럽상·회장 및 총무 공로상</div>
+        <div class="ptag"><span class="pe">6대</span> 심향 곽영애</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">금산교육사랑 장학재단 장학기금 25만원 후원</div>
+        <div class="ptag"><span class="pe">6대</span> 심향 곽영애</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">제33회 금산인삼축제 자원봉사 / 축제 행사장 청소봉사</div>
+        <div class="ptag"><span class="pe">7대</span> 소천 김정실</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">로타리 상징탑 청소봉사</div>
+        <div class="ptag"><span class="pe">7대</span> 소천 김정실</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">저소득층 연탄봉사 (2,000장·8가구) / 다솜 사회복지법인 김장 봉사</div>
+        <div class="ptag"><span class="pe">7대</span> 소천 김정실</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2014</span><span class="ycnt">7건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">01</div>
+        <div class="ebody"><div class="etext">금산군 <b>16개 지역아동센터 책 나눔</b> 봉사 (지구보조금)</div>
+        <div class="ptag"><span class="pe">7대</span> 소천 김정실</div></div>
+      </div><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">금산여고·금산고 졸업식 장학금 전달 / RI창립 기념 합동주회</div>
+        <div class="ptag"><span class="pe">7대</span> 소천 김정실</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">금산여고 입학식 장학금 전달 / 창립 6주년 기념주회</div>
+        <div class="ptag"><span class="pe">7대</span> 소천 김정실</div></div>
+      </div><div class="entry award">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제36년차 지구대회 — 우수클럽상·회원증강 우수클럽상·클럽발전공로상·최우수 지역대표상·우수회장상·우수총무상·재단기여공로상·회원증강상 등 다관왕</div>
+        <div class="ptag"><span class="pe">7대</span> 소천 김정실</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext">3680지구 지구회관 입주식 <b>감사패 표창</b> / 제34회 금산인삼축제 자원봉사</div>
+        <div class="ptag"><span class="pe">8대</span> 서현 고현숙</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">충남교통연수원 교통캠페인 / <b>시각장애인 정보통신 보조기기</b> 전달 (지구보조금)</div>
+        <div class="ptag"><span class="pe">8대</span> 서현 고현숙</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">교통캠페인 공로상 (상금 20만원) / 금산군 자원봉사자대회 <b>군수상</b></div>
+        <div class="ptag"><span class="pe">8대</span> 서현 고현숙</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2015</span><span class="ycnt">6건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">금산여고 졸업·입학·지정 장학금 전달</div>
+        <div class="ptag"><span class="pe">8대</span> 서현 고현숙</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제37년차 지구대회 — 사회봉사 우수클럽상·한국로타리장학문화재단기여공로상·클럽공로상·장기자랑 최우수상(상금 150만원)</div>
+        <div class="ptag"><span class="pe">8대</span> 서현 고현숙</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">장학문화재단 장학관리시스템 등록 (금산여고)</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">재단세미나 — <b>재단기부 우수클럽 표창패</b> / 제35회 인삼축제 안내봉사 (3D 입체영상관)</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">5개 클럽 합동주회·단합대회 / 다지구 합동주회 (단국대 천안)</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">제38년차 골프대회 / 가족봉사단과 <b>수험생 응원 캔들 350개</b> 제작·전달 (봉사 45명) / 인삼골건강마을 김장봉사</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2016</span><span class="ycnt">8건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">금산여고 졸업장학금 전달 (회원 개인 출연)</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 8주년 주회 / 장학문화재단 장학금 (금산여고 3명 각 50만원)</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제38년차 지구대회 — 우수클럽상·우수회장상·우수총무상·클럽공로상·재단/장학문화재단 기여공로상·장기자랑 장려상</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext"><b>로타리 서울국제대회</b> 참석 (일산 킨텍스)</div>
+        <div class="ptag"><span class="pe">9대</span> 다향 지춘예</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">11지역 한마음 연합의료 봉사 / 회원증강 세미나 <b>회원증강 우수클럽 표창패</b></div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">제36회 금산인삼축제 봉사 (10일간)</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext"><b>태풍 차바</b> 울산지역 재난 봉사 / 재단세미나 재단기부 우수클럽 표창패</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">지구보조금 — 청소년 20명 여성필수품 1년분 / 11지역 합동 김장·연탄봉사</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2017</span><span class="ycnt">9건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">01</div>
+        <div class="ebody"><div class="etext">금산로컬푸드 홍보 및 신년회</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">금산여고 졸업장학금 전달 (회원 개인 출연)</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 9주년 / 장학문화재단 장학금 (금산여고 2명 각 50만원)</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제39년차 지구대회 — <b>최우수클럽상</b>·최우수회장상·최우수총무상</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext"><b>글로벌보조금 30,000$</b> 전달 — 금산군 가족통합지원센터 다문화가정 한글교육</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">애틀랜타 국제대회 참석</div>
+        <div class="ptag"><span class="pe">10대</span> 담경 임예순</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext">11지역 합동 정기모임</div>
+        <div class="ptag"><span class="pe">11대</span> 인정 이영숙</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext"><b>세계인삼엑스포</b> 인삼체험관 봉사 (16일간)</div>
+        <div class="ptag"><span class="pe">11대</span> 인정 이영숙</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">지구보조금 — 여성청소년 20명 여성필수품 1년분 / 11지역 합동 김장·따뜻한 사랑 나누기</div>
+        <div class="ptag"><span class="pe">11대</span> 인정 이영숙</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2018</span><span class="ycnt">6건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">금산여고 졸업장학금 전달 (회원 개인 출연)</div>
+        <div class="ptag"><span class="pe">11대</span> 인정 이영숙</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext"><b>창립 10주년</b> 기념 / 장학문화재단 장학금 (금산여고 2명 각 50만원)</div>
+        <div class="ptag"><span class="pe">11대</span> 인정 이영숙</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제40년차 지구대회 — 지역우수클럽상·회장상·총무상·클럽공로상·회원증강상</div>
+        <div class="ptag"><span class="pe">11대</span> 인정 이영숙</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">금산인삼축제 봉사 (인삼체험관) / 재단세미나 <b>재단우수클럽상</b></div>
+        <div class="ptag"><span class="pe">12대</span> 유석 최순진</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">지구보조금 — 여성청소년 여성필수품 1년분 지원</div>
+        <div class="ptag"><span class="pe">12대</span> 유석 최순진</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext"><b>향림원 보육시설 영아 방한복</b> 지원 (지구보조금) / 성탄절 어린이집·지역아동센터 선물</div>
+        <div class="ptag"><span class="pe">12대</span> 유석 최순진</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2019</span><span class="ycnt">10건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 11주년 기념식</div>
+        <div class="ptag"><span class="pe">12대</span> 유석 최순진</div></div>
+      </div><div class="entry award">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제41년차 지구대회 — 우수클럽상·우수회장상·우수총무상</div>
+        <div class="ptag"><span class="pe">12대</span> 유석 최순진</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext">11지역 합동 로타리지식 연수프로그램 (매주 화요일)</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext">회원증강 세미나 — <b>상반기 최우수클럽상</b></div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">금산인삼축제 봉사 (건강미인관)</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">총재공식방문·11지역 합동 정기모임 / 소아마비박멸 캠페인 / 인삼골건강마을 금빛나눔축제</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">재단세미나 <b>재단기부 우수클럽 표창패·기여띠</b>, 고액기부 표창 / 웃음치료 강좌</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext"><b>찾아가는 행복밥상</b> 점심 나눔봉사 (군북면)</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">희망의언덕·11지역 합동 김장봉사 / 지구보조금 여성청소년 30명 + 향림원 겨울나기 물품(신발·내복)</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">치매 자원연계 네트워크 간담회 / 평화 공감 토론 참석</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2020</span><span class="ycnt">9건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">01</div>
+        <div class="ebody"><div class="etext">연차총회 — <b>클럽 정관·세칙·회칙 제정</b> 의결</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">글로벌보조금 — 태국 퀸시크릿국립아동연구소 <b>아동 청각의료기기</b> 지원 (11지역 합동)</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext"><b>코로나19 마스크 만들기</b> 봉사</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry award">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제42년차 지구대회 — 최우수클럽상·전회원 EREY상·최우수회장상·최우수총무상·재단기여공로상·장학문화재단기여공로상·클럽공로상 등 다관왕</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext">금산여고 장학금 전달 (회원 개인 출연)</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">솔로몬지역아동센터 지원사업</div>
+        <div class="ptag"><span class="pe">13대</span> 정향 김순자</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext">금산군 <b>수해지역 대민 지원봉사</b></div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">클럽사무실 이전 개소식 / 총재 공식방문·11지역 합동 정기모임 / 젓갈바자회·소아마비 박멸 캠페인</div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">재단세미나 — 전회원 EREY·<b>폴리오캠페인 최우수상</b>·재단기부 우수상 / <b>금산농협 MOU</b> 체결 / 11지역 합동 김장봉사</div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2021</span><span class="ycnt">10건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext"><b>금산교육지원청 MOU</b> 체결 (학교폭력 없는 학교) / 지역아동 학용품·읍민 위생용품·어린이 책놀이 봉사</div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 13주년 기념식·금산동중 장학금 / 소아마비·학교폭력·교통안전 캠페인, 하천 환경정화, 꽃화분·꽃꽂이 봉사</div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제43년차 지구대회 — <b>종합최우수클럽상(종합 3위)</b>·최우수회장상·최우수총무상·클럽공로상·장학문화재단/재단기여공로상·회원증강상</div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext">장학금 지급 (대학생 1·고등학생 2)</div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">알참시장 참여 — 수제 딸기청 제조·판매</div>
+        <div class="ptag"><span class="pe">14대</span> 미가 한진안</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext"><b>코로나 예방접종센터</b> 의료진 간식지원·안내봉사 (3일간)</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">1차 재능나눔 이·미용 봉사 / 총재공식방문 클럽협의회·장학금 지급</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">11지역 환경정화 합동봉사(금산천)·젓갈바자회 / 2차 재능나눔 이·미용 봉사 / 지역아동센터 물품전달</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">세계소아마비의날 플로킹 챌린지 / 11지역 합동 김장봉사 / 재단세미나 우수상·고액기부 표창</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">지구보조금 여성청소년 위생용품 / <b>학교 밖 아이들 방한복·주거환경 개선 시공(샷시·도배·장판)</b>·아동학대 예방캠페인</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2022</span><span class="ycnt">10건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">01</div>
+        <div class="ebody"><div class="etext"><b>치매안심센터 MOU</b> 체결·설맞이 물품 지원</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 14주년·금산고 장학금 / <b>캄보디아 아기 병원비</b> 지원</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry award">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>11지역 환경정화 봉사 / 제44년차 지구대회 — 전회원 EREY·우수회장상·우수총무상·로타리재단위원회 표창·클럽공로상·회원증강상·<b>종합우수클럽상·장기자랑 1등</b></div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext">재능기부 가족사랑 프로젝트 (나만의 컵 만들기)</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext"><b>글로벌보조금 승인</b> (11지역 합동, 태국 의료기기 지원) / 금산여고 장학금</div>
+        <div class="ptag"><span class="pe">15대</span> 금휴당 박정옥</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext">제1회 일본군 위안부 피해자 기림의날 행사 참석 / <b>금산소방서 MOU</b> 체결 / 부여 수해복구 봉사 / 환경정화 플로킹</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">재능기부·어르신 봉숭아 물들이기 체험 / 재단세미나 재단기부 우수클럽 / 제40회 금산인삼축제 부스 봉사</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">11지역 합동 소아마비 퇴치 캠페인 / 지구 역점사업 <b>라오스 학교짓기 후원금 1,000만원</b> / 꿀고구마 캐기·알참시장 판매 / 향림원 학생 교통사고 피해 후원 100만원</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">11지역 합동 줍킹 / 클럽 장학금 100만원(관내고 3학년 2명) / 장애인의날 안내봉사 / <b>금산군 고3 수험생 전체 격려 찹쌀떡</b> / 11지역 합동 헌혈·김장봉사 / 아동학대 예방캠페인·소화기 전달</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">지구보조금 여성청소년 위생용품·소외계층 겨울나기 물품 / 희망의언덕 김장봉사 / 치매극복의날 안내봉사</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2023</span><span class="ycnt">9건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">01</div>
+        <div class="ebody"><div class="etext">미라클 지역아동센터 겨울난방 유류 지원</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 15주년 야유회·단합대회 / 금산사랑 환경보호 플로킹 봉사</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>제45년차 지구대회 — 지구역점사업 참여 우수클럽 표창패·<b>종합최우수클럽 표창패</b>·최우수회장상·최우수총무상·회원증강상·KR재단기여공로상 표창패</div>
+        <div class="ptag"><span class="pe">16대</span> 여운 임미애</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext"><b>희망의 쌀 500KG</b> 지역아동센터 나눔 / 진산면 폭우 피해 긴급 수해복구 / RI존 11·12 회원증강 띠 부여 / 부여 장암면·공주 수해복구 / 3680 산악회 출범식</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext"><b>금산군 지역아동센터 업무협약</b> / 4주간 11지역 로타리 지식세미나 / <b>금산군 장애인 체육회 MOU</b> / 11지역 합동 생태교란식물(가시박) 제거 봉사</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">회원증강·지식세미나 우수상 / 어르신 손톱 봉숭아 물들이기 / 재단세미나 회원증강 우수상 / 충청도민 체육대회 급수·먹거리 봉사 / 장애인 게이트볼 답례품 전달 / 11지역 총재 공식방문</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">충남 도민의날 <b>모범 충남인 개인표창장(회장)</b> / 금산세계인삼축제 한복체험부스(10일간) / 소아마비 박멸 가두캠페인 / 지구체전 11지역 합동 준우수상·입장식 퍼포먼스 2위 / 알참시장 참여 / 새우젓 바자회</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext"><b>성가정 통합 상담소 MOU</b> / 금산인삼클러버 바자회 / 아동 폭력 예방 캠페인 / 11지역 합동 김장봉사 / 농업기술센터 협약·지역아동센터 간식 꾸러미 전달</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext">지구보조금 사랑의 연탄 나눔 / 소외계층 독거어르신 사랑의 내복 나눔</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2024</span><span class="ycnt">10건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">회원 단합 윷놀이 대회 / <b>청소년 미래센터 방과후 아카데미 생일케이크 매월 전달</b> 약정</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">드림스타트와 사랑의 반찬나눔(수익기금 4차) / 창립 16주년·장학금(계명대·금산여고·금산산업고) / 소아마비 기금마련·<b>장애인 가정 전기하이라이트 10가정 전달</b> / 금산천 줍킹</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>로타리알리기 야유회 / 제46년차 지구대회 — 최우수회장상·최우수총무상·공공이미지공로상·충남 자원봉사단체 센터장상·회원증강상·<b>최우수 대상 클럽</b></div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">발달장애인 축구팀 축구복 전달 / 성가족 통합상담소 보라데이 캠페인</div>
+        <div class="ptag"><span class="pe">17대</span> 청천 최미정</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext">전국 장애인 게이트볼대회 봉사 / 추부·복수면 수해 복구(11지역 합동) / <b>희망나눔 쌀 800KG</b> 기증 / 추부면 수해농가 복구(마전RC 합동) / 라일라 수련회 바비큐 봉사</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext"><b>청소년 미래센터 중등 방과후 아카데미 생일케이크·간식 연중 제공</b> (~2025.06)</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext"><b>학교밖 청소년 지원센터 MOU</b>·삼계탕 음식봉사 / 기림의날 행사·주변정화 / <b>정신건강복지센터 MOU</b> / <b>자연재해 수해 물자 2,000만원(이불 100채)</b> 군청 전달 / 청소년 미래센터 방과후 아카데미 MOU</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">장애인 체육대회 급수봉사 / 수해농가 라면 100박스 전달 / 총재 공식방문·11지역 합동 정기모임 / 신입회원·회원증강 세미나</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">제42회 인삼축제 두더지게임장 봉사(64명) / 11지역 합동 줍킹 / <b>END POLIO NOW 1~3차 캠페인</b> / 지구촌환경지킴이 국민운동본부 MOU / 재단세미나 한국장학문화재단 기여 우수상·RI재단 기여 우수클럽 / 반찬만들기 기금마련 / <b>금산 시니어클럽 MOU</b></div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext">직장 정기모임 / 청소년 자해·자살 예방 캠페인 / 인삼골건강마을·희망의언덕 김장봉사 / 아동학대방지 캠페인 / 지구보조금 여성청소년 위생용품(30명) / 다문화가정·경로당 반찬봉사</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2025</span><span class="ycnt">11건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">01</div>
+        <div class="ebody"><div class="etext">47년차 로타리 지식연구교육(11지역 합동) / 설맞이 환경정화 줍킹</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 17주년 기념식·감사장 수여</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext">세계여성의날 캠페인 / 학교밖 청소년 지원센터 연계 아웃리치 봉사(학습용품·간식)</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry award">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span>금산 환경정화 줍킹 / 제47년차 지구대회 — 종합우수클럽·우수회장상·우수총무상·RI·KR 재단기부 우수클럽·<b>장학기금 1억 봉사탑</b>·산악회 최다참가상(82개 중 6위)·재단기부 레벨1·관명장학의인 및 장학문화 기여상·회원증강상·로타리봉사상(15년 개참상)</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">가정폭력·아동학대 방지 보라데이 캠페인</div>
+        <div class="ptag"><span class="pe">18대</span> 선은 임미용</div></div>
+      </div><div class="entry">
+        <div class="mo">07</div>
+        <div class="ebody"><div class="etext">독거어르신 백미 500KG 기탁 / 2025-26 3680산악회 출범식·줍킹 / 홍성군 수해복구 봉사</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">08</div>
+        <div class="ebody"><div class="etext">광복절 기념 환경정화 줍킹 / 위안부 피해자 기림의날 기념식 참여 / 라일라 수련회 간식봉사</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">09</div>
+        <div class="ebody"><div class="etext">김용근 총재 공식방문·11지역 합동 정기모임 (<b>PHF 연속기부 벳지</b> 10년 윤현희·5년 한진안) / 청소년 상담복지센터 애너지업 봉사(금산여중) / 새우젓 판매 기금마련 / <b>제43회 인삼축제 인삼꽃주 병 만들기</b> 봉사(10일간 70여 명) / END POLIO NOW 캠페인 / 자연재해대응보조금 물품 전달 / 11지역 합동 줍킹</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">10</div>
+        <div class="ebody"><div class="etext">재단세미나 <b>RI재단기부 우수클럽</b> / 금산군수배 장애인 게이트볼대회 봉사 / 지구보조금 여성청소년 위생용품(30명) / <b>금산WFC(여성축구클럽) MOU</b></div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">11</div>
+        <div class="ebody"><div class="etext"><b>충남금산지역자활센터 MOU</b> / 더코리아 로타리 페스티벌 인삼튀김 판매 기금마련 / 청소년 상담복지센터 애너지업 봉사(추부중·용문초)</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">12</div>
+        <div class="ebody"><div class="etext"><b>독거어르신 방한내복 나눔(60벌, 210만원 상당)</b> / 아동학대방지 캠페인 / 지역자활센터 사랑의 선물꾸러미 나눔(65명 식료품)</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div></div>
+    </section>
+<section class="yblock">
+      <div class="ymark"><span class="ynum">2026</span><span class="ycnt">6건</span></div>
+      <div class="entries"><div class="entry">
+        <div class="mo">02</div>
+        <div class="ebody"><div class="etext">직장 정기모임(딸기농장)</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">03</div>
+        <div class="ebody"><div class="etext">창립 18주년 기념야유회(통영) / 세계여성의날 캠페인 / 봄맞이 환경정화 줍킹 / <b>11지역 합동 탄소중립 캠페인</b></div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry award">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext"><span class="atag">수상</span><b>관명장학금·클럽장학금 150만원</b> 지급(군산대·한밭대·금산하이텍고·여주대·금산동중)·개인장학의인 뱃지 / 제48년차 지구대회 — 지역우수상·모범로타리안상·회원증강상·장학문화재단 기여상·로타리봉사상(15년 개참상)</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">04</div>
+        <div class="ebody"><div class="etext">장애인의날 반다비 체육센터 개관식 안내봉사</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">05</div>
+        <div class="ebody"><div class="etext">금산스완즈 WFC 초청 하계 여성축구 스토브리그 봉사</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div><div class="entry">
+        <div class="mo">06</div>
+        <div class="ebody"><div class="etext">2026 행복금산 진로꿈틀의 날 봉사</div>
+        <div class="ptag"><span class="pe">19대</span> 바름 정기수</div></div>
+      </div></div>
+    </section>
+</div>
+<footer class="foot">
+ <div>금산미향로타리클럽 · 국제로타리 3680지구 11지역</div>
+ <div style="margin-top:4px"><a href="index.html">메인 페이지로 돌아가기 &rarr;</a></div>
+ <div class="motto">Service Above Self</div>
+</footer>
+</body>
+</html>

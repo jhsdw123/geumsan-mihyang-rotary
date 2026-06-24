@@ -312,6 +312,32 @@
     .a-item:hover{transform:none;border-color:var(--glass-bd);box-shadow:0 10px 30px -16px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.5);}
     .pcard:hover .p-portrait img{transform:none;}
   }
+
+  /* 연혁 상세 보기 CTA */
+  .history-cta-wrap{display:flex;justify-content:center;padding:4px 20px 2px;}
+  .history-cta{display:inline-flex;align-items:center;gap:16px;text-decoration:none;
+    background:linear-gradient(180deg,#fffdf8,#fbf5e8);border:1.6px solid var(--gold);
+    border-radius:999px;padding:13px 16px 13px 14px;color:var(--royal-deep);
+    box-shadow:0 10px 26px -14px rgba(200,160,74,.55);
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;}
+  .history-cta:hover,.history-cta:focus-visible{transform:translateY(-3px);outline:none;
+    background:linear-gradient(155deg,var(--gold-bright),var(--gold));color:#3a2906;
+    box-shadow:0 18px 36px -14px rgba(200,160,74,.75);}
+  .hc-ic{flex:none;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 36% 30%,#fff6df,var(--gold) 62%,var(--gold-dark));
+    box-shadow:0 4px 12px -4px rgba(169,132,47,.7);}
+  .hc-ic svg{width:22px;height:22px;}
+  .hc-tx{display:flex;flex-direction:column;font-family:var(--serif-ko);font-weight:700;font-size:17px;line-height:1.25;letter-spacing:.01em;}
+  .hc-tx small{font-family:var(--sans);font-weight:400;font-size:11.5px;color:var(--ink-soft);letter-spacing:0;margin-top:2px;}
+  .history-cta:hover .hc-tx small,.history-cta:focus-visible .hc-tx small{color:#5c4711;}
+  .hc-arr{flex:none;margin:0 6px 0 2px;font-size:20px;line-height:1;transition:transform .25s ease;opacity:.85;}
+  .history-cta:hover .hc-arr,.history-cta:focus-visible .hc-arr{transform:translateX(5px);opacity:1;}
+  @media (max-width:560px){
+    .history-cta{padding:11px 14px;gap:12px;}
+    .hc-tx{font-size:15px;}
+    .hc-tx small{font-size:10.5px;}
+    .hc-ic{width:38px;height:38px;}
+  }
 </style>
 </head>
 <body>
@@ -346,6 +372,15 @@
       <div class="annual-grid" id="annualGrid"></div>
     </div>
   </section>
+
+  <!-- 연혁 상세 보기 버튼 -->
+  <div class="history-cta-wrap">
+    <a class="history-cta" href="history.html" target="_blank" rel="noopener" aria-label="연혁 상세히 보러가기 (새 창)">
+      <span class="hc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3.5h9.5A2.5 2.5 0 0 1 18 6v12.5a1.5 1.5 0 0 0 1.5 1.5M6 3.5A2.5 2.5 0 0 0 3.5 6v11.5a2.5 2.5 0 0 0 2.5 2.5h13.5M6 3.5A2.5 2.5 0 0 1 8.5 6v11" stroke="#0D2348" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5h6M8.5 10.5h6M8.5 13.5h4" stroke="#0D2348" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+      <span class="hc-tx">연혁 상세히 보러가기<small>회장별·날짜순 전체 연혁을 새 창에서</small></span>
+      <span class="hc-arr" aria-hidden="true">→</span>
+    </a>
+  </div>
 
   <nav class="pnav"><div class="pnav-inner" id="pnav"></div></nav>
 
